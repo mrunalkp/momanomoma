@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+<p><label for="file" style="cursor: pointer;">Upload Content Image</label></p>
+<p><img id="output" width="512" /></p>
+
+
+<p><input type="file"  accept="image/*" name="image" id="file2"  onchange="loadFile2(event)" style="display: none;"></p>
+<p><label for="file" style="cursor: pointer;">Upload Style Image</label></p>
+<p><img id="output2" width="512" /></p>
+
+<script>
+var loadFile = function(event) {
+  var image = document.getElementById('output');
+  image.src = URL.createObjectURL(event.target.files[0]);
+};
+
+var loadFile2 = function(event) {
+  var image = document.getElementById('output2');
+  image.src = URL.createObjectURL(event.target.files[1]);
+};
+</script>
